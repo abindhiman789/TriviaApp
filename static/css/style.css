@@ -1,0 +1,149 @@
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+
+
+/* start welcome animation */
+
+body.welcome {
+  background: #512da8;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.welcome .splash {
+  height: 0px;
+  padding: 0px;
+  border: 130em solid #039be5;
+  position: fixed;
+  left: 50%;
+  top: 100%;
+  display: block;
+  box-sizing: initial;
+  overflow: hidden;
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+}
+
+.welcome #welcome {
+  background: #311b92 ;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  overflow: hidden;
+  opacity: 0;
+  color:#311b92 ;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* moveIn */
+.welcome header,
+.welcome a.btn {
+  opacity: 0;
+  animation: moveIn 2s 3.1s ease forwards;
+}
+
+@keyframes init {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  100% {
+    width: 56px;
+    height: 56px;
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes puff {
+  0% {
+    top: 100%;
+    height: 0px;
+    padding: 0px;
+  }
+  100% {
+    top: 50%;
+    height: 100%;
+    padding: 0px 100%;
+  }
+}
+
+@keyframes borderRadius {
+  0% {
+    border-radius: 50%;
+  }
+  100% {
+    border-radius: 0px;
+  }
+}
+
+@keyframes moveDown {
+  0% {
+    top: 50%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    background: #311b92;
+    top: 100%;
+  }
+  50% {
+    top: 40%;
+  }
+  100% {
+    top: 50%;
+    padding: 30px;
+    font-size: 30px;
+    color:white;
+    background: #039be5;
+  }
+}
+
+.welcome #firstPage {
+  background: #311b92 ;
+  width: 50%;
+  height: 400px;
+  position: absolute;
+  margin:0% 25%;
+  color:#039be5 ;
+  border-radius: 10%;
+  padding:20px 60px;
+  box-sizing: border-box;
+}
+.historyPage{
+  background: white ;
+  width: 50%;
+  height: 500px;
+  position: absolute;
+  margin:3% 25%;
+  box-sizing: border-box;
+  padding:40px 20px;
+  line-height: 20px;
+  overflow: auto;
+}
+a{text-decoration: none;}
+.block{margin:2% 10%;width:80%;font-size: 16px;padding: 10px;border: 0px;color:white}
+.textbox{margin:2% 10%;width:80%;font-size: 16px;padding: 10px;border: 0px;}
+.button{margin:2% 10%;width:400px;font-size: 16px;padding:10px;border:0px; background:#039be5 ;color: white}
+.buttonLink{margin:2% 10%;width:400px;text-align:center;border-radius:10px;font-size: 16px;text-decoration:none;padding:10px;border:0px; background:#039be5 ;color: white}

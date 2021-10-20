@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+ {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body class="welcome">
+<form method="POST" class="post-form">
+        {% csrf_token %}
+
+
+<div class="historyPage">
+<table width="100%" cellpadding="10">
+    <tbody>
+    {{ count0 }}
+{% for p1 in data %}
+    <tr><td>GAME {{ p1.id }} : <b>{{ p1.test_at }}</b></td></tr>
+    <tr><td>Name : <b>{{ p1.Name}}</b></td></tr>
+    <tr><td>Who is the best cricketer in the world?</td></tr>
+    <tr>  <td>Answer : <b>{{ p1.player_name }}</b></td></tr>
+    <tr><td>What are the colors in the national flag?</td></tr>
+    <tr>  <td>Answer: <b> {% for p2 in p1.flag_color %}
+                       {{p2}}
+                          {% endfor %}
+        </b></td></tr>
+    <tr>  <td><hr/> </td></tr>
+
+{% endfor %}
+    </tbody>
+</table>
+</div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+ {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body class="welcome">
+<form method="POST" class="post-form" >
+        {% csrf_token %}
+
+<div id="firstPage" class="z-depth-4">
+<div class="block">
+    What are the colors in the Indian national flag? Select all:
+</div>
+<div class="block">
+A)<input type="checkbox" name="Color[]" id="White" value="White"/> White
+</div>
+<div class="block">
+B)<input type="checkbox" name="Color[]" id="Yellow" value="Yellow"/> Yellow
+</div>
+<div class="block">
+C)<input type="checkbox" name="Color[]" id="Orange" value="Orange"/>Orange
+
+</div>
+<div class="block">
+D)<input type="checkbox" name="Color[]" id="Green" value="Green"/>Green
+</div>
+<div class="block">
+        <button type="submit" class="button">Next</button>
+</div>
+</div>
+
+
+</form>
+</body>
+</html>

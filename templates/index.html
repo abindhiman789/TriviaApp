@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+ {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body class="welcome">
+<form method="POST" class="post-form">
+        {% csrf_token %}
+
+  <span id="splash-overlay" class="splash"></span>
+<a href="/FirstPage"><span id="welcome" class="z-depth-4"> Trivia</span></a>
+
+  </span>
+
+
+</form>
+</body>
+</html>

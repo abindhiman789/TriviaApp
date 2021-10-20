@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+ {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body class="welcome">
+<form method="POST" class="post-form">
+        {% csrf_token %}
+
+<div id="firstPage" class="z-depth-4">
+<div class="block">
+    Who is the best cricketer in the world?
+</div>
+<div class="block">
+A)<input type="radio" name="cricketer" id="radioA" value="Sachin Tendulkar"/> Sachin Tendulkar
+</div>
+<div class="block">
+B)<input type="radio" name="cricketer" id="radioB" value="Virat Kolli"/> Virat Kolli
+</div>
+<div class="block">
+C)<input type="radio" name="cricketer" id="radioC" value="Adam Gilchirst"/>Adam Gilchirst
+
+</div>
+<div class="block">
+D)<input type="radio" name="cricketer" id="radioD" value="Jacques Kallis"/>Jacques Kallis
+</div>
+<div class="block">
+        <button type="submit" class="button">Next</button>
+</div>
+</div>
+
+
+</form>
+</body>
+</html>
